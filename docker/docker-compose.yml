@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  flow_edit:
+    container_name: flow_edit
+    image: maximofn/flow_edit:1.0.1
+    build: .
+    runtime: nvidia
+    network_mode: "host"
+    volumes:
+      - ./hub:/root/.cache/huggingface/hub
+      - ./.env:/FlowEdit/.env
+    tty: true
+    stdin_open: true

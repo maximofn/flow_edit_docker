@@ -1,0 +1,5 @@
+version: "3.8"
+
+services:
+  flow_edit:
+    entrypoint: ["bash", "-c", "python app.py"]
